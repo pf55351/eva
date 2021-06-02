@@ -9,7 +9,7 @@ function Alert({typeAlert,titleAlert,showAlert,setShowAlert,address}) {
  return (
     <div>
       <SweetAlert show={showAlert} showConfirm={false} type={typeAlert}  title={titleAlert} onConfirm={hideAlert} >
-        <p>More info are avaiable <a href={`https://etherscan.io/address/${address}`} rel="noreferrer" target="_blank">here</a></p>
+       {typeAlert==='success' && <p>More info are avaiable <a href={`https://etherscan.io/address/${address}`} rel="noreferrer" target="_blank">here</a></p>}
         <div>
         <Button onClick={() => hideAlert()}
               className="App-item"
