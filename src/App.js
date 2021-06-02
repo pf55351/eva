@@ -19,9 +19,7 @@ import Message from "./Message";
 
 function App() {
   const { Input } = Form;
-  const [ethAddress, setEthAddress] = useState(
-    "0xFecC9Bf3ECCE9482cCfa8b71206fD60cf58525e5"
-  );
+  const [ethAddress, setEthAddress] = useState("");
   const [colorInput, setColorInput] = useState("primary");
   const [errorMsg, setErrorMsg] = useState("");
   const [typeAlert, setTypeAlert] = useState("custom");
