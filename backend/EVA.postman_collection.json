@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "6905d100-014f-49cd-bc08-65704c0c5602",
+		"name": "EVA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Verify Address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eth_addr\":\"0xFecC9Bf3ECCE9482cCfa8b71206fD60cf58525e5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/verifyAddress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"verifyAddress"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
