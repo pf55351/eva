@@ -2,7 +2,8 @@
   "name": "eva",
   "version": "0.1.0",
   "engines": {
-    "node": "14.17.3"
+    "node": "14.17.3",
+    "npm": "7.20.5"
   },
   "private": true,
   "dependencies": {
