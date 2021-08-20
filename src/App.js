@@ -1,7 +1,7 @@
 import { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import "react-bulma-components/dist/react-bulma-components.min.css";
+import "bulma/css/bulma.min.css";
 import { Form } from "react-bulma-components";
 import {
   Button,
