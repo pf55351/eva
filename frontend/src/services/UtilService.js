@@ -8,11 +8,14 @@ const serverPath = `${serverUrl}${serverPort ? `:${serverPort}` : ""}${
   serverContext ? serverContext : ""
 }`;
 
-let config = {
-  headers: {
-    "Access-Control-Allow-Origin": "*",
-  },
-};
+ let config = {
+   headers: {
+     headers: {
+       "Access-Control-Allow-Origin": true,
+     },
+   },
+ }; 
+
 const verifyAddressService = async (data) => {
   const endPoint = process.env.REACT_APP_IS_VALID_ADDRESS_SERVICE;
   const result = await axios.post(`${serverPath}${endPoint}`, data, config);

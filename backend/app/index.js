@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const serverless = require("serverless-http");
+// const { createProxyMiddleware } = require("http-proxy-middleware");
 const app = express();
 const cors = require("cors");
 const router = express.Router();
@@ -11,9 +12,15 @@ const utils = require("../utils/utils");
 const myToken = process.env.TOKEN;
 
 /* MIDDLEWARE */
-app.use(cors({ origin: ["https://ethereum-verification-address.netlify.app/"] }));
+app.use(cors());
 app.use(express.json());
-
+/* app.use(
+  "/.netlify/functions/index",
+  createProxyMiddleware({
+    target: "https://ethereum-verification-address.netlify.app/",
+    origin: true,
+  })
+); */
 app.use("/", router); // path must route to lambda
 app.use("/.netlify/functions/index", router); // path must route to lambda
 
