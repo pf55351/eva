@@ -11,7 +11,7 @@ const utils = require("../utils/utils");
 const myToken = process.env.TOKEN;
 
 /* MIDDLEWARE */
-app.use(cors({ origin: "https://ethereum-verification-address.netlify.app/" }));
+app.use(cors({ origin: ["https://ethereum-verification-address.netlify.app/"] }));
 app.use(express.json());
 
 app.use("/", router); // path must route to lambda
