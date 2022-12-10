@@ -1,3 +1,4 @@
+
 # EVA Project
 Ethereum Verification Address Project
 
@@ -6,4 +7,4 @@ The project consists of two parts, the frontend, a single page application (SPA)
 and the backend API server written in NodeJS/Express.
 The project uses Web3js util to check if the ethereum address is valid.
 
-**Online demo** is available [here](http://ethereum-verification-address.netifly.app/)
+**Online demo** is available [here](https://ethereum-verification-address.netlify.app/)

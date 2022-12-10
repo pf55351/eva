@@ -1,13 +1,13 @@
-const web3 = require("web3");
-var cache = require("memory-cache");
+import web3 from "web3";
+import cache from "memory-cache";
 
-const isValidEthAddress = async (ethAddress) => {
-    try {
+const isValidEthAddress = async (ethAddress: string) => {
+  try {
     if (!ethAddress && typeof ethAddress !== "string") {
       return false;
     }
     let result;
-   // result = cache.get(ethAddress);
+    // result = cache.get(ethAddress);
     if (!result) {
       result =
         web3.utils.isAddress(ethAddress) &&
@@ -16,9 +16,9 @@ const isValidEthAddress = async (ethAddress) => {
     }
     return result;
   } catch (_err) {
-    console.err(_err);
+    console.error(_err);
     return false;
   }
 };
 
-module.exports = { isValidEthAddress };
+export { isValidEthAddress };
