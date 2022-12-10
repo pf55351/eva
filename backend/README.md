@@ -1,2 +1,2 @@
-# eva_server
-Server side for EVA 
+# eva backend
+Api Server side for EVA frontend written in NodeJS/Express.

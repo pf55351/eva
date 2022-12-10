@@ -3,18 +3,17 @@ import axios from "axios";
 const serverUrl = process.env.REACT_APP_API_URL;
 const serverPort = process.env.REACT_APP_API_PORT;
 const serverContext = process.env.REACT_APP_API_CONTEXT;
+const apiToken = process.env.REACT_APP_TOKEN;
 
 const serverPath = `${serverUrl}${serverPort ? `:${serverPort}` : ""}${
   serverContext ? serverContext : ""
 }`;
 
- let config = {
-   headers: {
-     headers: {
-       "Access-Control-Allow-Origin": true,
-     },
-   },
- }; 
+let config = {
+  headers: {
+    "X-API-KEY": apiToken,
+  },
+};
 
 const verifyAddressService = async (data) => {
   const endPoint = process.env.REACT_APP_IS_VALID_ADDRESS_SERVICE;

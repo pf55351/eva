@@ -106,3 +106,4 @@ dist
 
 .env
 functions
+coverage

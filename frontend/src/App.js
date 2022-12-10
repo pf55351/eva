@@ -30,8 +30,7 @@ function App() {
     e.preventDefault();
     setErrorMsg("");
     if (controlInput(ethAddress)) {
-      const token = process.env.REACT_APP_TOKEN;
-      const data = { token, ethAddress };
+      const data = { ethAddress };
       verifyAddressService(data).then((result) => {
         if (result.res === "OK") {
           setTypeAlert("success");

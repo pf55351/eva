@@ -1,3 +1,3 @@
-# eva
+# eva front-end
 Ethereum Verification Address
-Simple React single page application that checks if an ethereum address is valid
+Single page application written in React that checks if an ethereum address is valid
