@@ -1,0 +1,10 @@
+version: "3"
+services:
+  eva-frontend:
+    build: ./frontend/
+    ports:
+        - "80:80"
+  eva-backend:
+    build: ./backend/
+    ports:
+        - "9000:9000"
